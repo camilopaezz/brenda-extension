@@ -15,20 +15,20 @@ const common = {
     // the build folder to output bundles and assets in.
     path: PATHS.build,
     // the filename template for entry chunks
-    filename: '[name].js',
+    filename: '[name].js'
   },
   devtool: 'source-map',
   stats: {
     all: false,
     errors: true,
-    builtAt: true,
+    builtAt: true
   },
   module: {
     rules: [
       // Help webpack in understanding CSS files imported in .js files
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       },
       // Check for images imported in .js files and
       {
@@ -38,12 +38,22 @@ const common = {
             loader: 'file-loader',
             options: {
               outputPath: 'images',
-              name: '[name].[ext]',
-            },
-          },
-        ],
+              name: '[name].[ext]'
+            }
+          }
+        ]
       },
-    ],
+      {
+        test: /\.?js$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react']
+          }
+        }
+      }
+    ]
   },
   plugins: [
     // Print file sizes
@@ -53,15 +63,15 @@ const common = {
       patterns: [
         {
           from: '**/*',
-          context: 'public',
-        },
+          context: 'public'
+        }
       ]
     }),
     // Extract CSS into separate files
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-  ],
-};
+      filename: '[name].css'
+    })
+  ]
+}
 
 module.exports = common;

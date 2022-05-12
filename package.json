@@ -8,13 +8,26 @@
     "build": "webpack --mode=production --config config/webpack.config.js"
   },
   "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-env": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "babel-loader": "^8.2.5",
     "copy-webpack-plugin": "^6.4.1",
     "css-loader": "^4.3.0",
     "file-loader": "^6.2.0",
     "mini-css-extract-plugin": "^0.10.1",
     "size-plugin": "^2.0.2",
-    "webpack": "^4.46.0",
+    "webpack": "^5.72.1",
     "webpack-cli": "^3.3.12",
     "webpack-merge": "^5.8.0"
+  },
+  "dependencies": {
+    "@chakra-ui/react": "^1.8.8",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "framer-motion": "^6.3.3",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1"
   }
 }

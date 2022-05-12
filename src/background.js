@@ -6,5 +6,8 @@
 // See https://developer.chrome.com/extensions/background_pages
 
 chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
-  
+  chrome.tabs.sendMessage(tabId, {
+    type: 'is-fake',
+    url: tab.url
+  });
 })

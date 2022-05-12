@@ -1,0 +1,23 @@
+#banner222 {
+  background-color: #ffd60a;
+  position: sticky;
+  z-index: 99999;
+  text-align: center;
+  font-family: sans-serif;
+  padding-block: 25px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+#banner222 p {
+  font-size: 25px;
+  font-weight: bold;
+  color: black;
+  margin: 0;
+}
+
+#banner222 small {
+  font-size: 15px;
+  font-weight: normal;
+  text-decoration: underline;
+}
