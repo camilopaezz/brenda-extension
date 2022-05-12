@@ -1,11 +1,15 @@
 {
-  "name": "BRENDA",
+  "name": "brenda",
   "version": "0.1.0",
   "description": "My Chrome Extension",
   "private": true,
   "scripts": {
     "watch": "webpack --mode=development --watch --config config/webpack.config.js",
     "build": "webpack --mode=production --config config/webpack.config.js"
+  },
+  "author": {
+    "name": "Camilo Paez",
+    "email": "camilopaez.dev@gmail.com"
   },
   "devDependencies": {
     "@babel/core": "^7.17.10",
